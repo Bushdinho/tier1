@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Import Blueprint™ — Tier 1 | The Profitable Retail System</title>
+<meta name="description" content="The 8-week self-paced program that gives Ghana clothing retailers a complete US/UK importing system. Sourcing, payments, shipping, currency protection and more.">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#07070A;--deep:#0F0F12;--dark:#161618;--card:#1C1C20;--card2:#222226;
+  --border:#2A2A30;--border2:#363640;
+  --gold:#D4A832;--gold-l:#ECC85A;--gold-pale:#F5E8B4;--gold-dim:rgba(212,168,50,.1);
+  --white:#F0EEF8;--off:#B8B4CC;--muted:#606070;
+  --red:#C04040;--red-bg:rgba(192,64,64,.1);
+  --green:#2A8A54;--green-l:#3DB870;--green-bg:rgba(42,138,84,.1);
+  --teal:#2A9080;--teal-l:#3ABAA8;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--off);font-family:'Syne',sans-serif;font-size:14px;line-height:1.7;overflow-x:hidden}
+
+/* TOPBAR */
+.topbar{background:var(--deep);border-bottom:1px solid var(--border);padding:14px 32px;display:flex;justify-content:space-between;align-items:center}
+.tb-brand{font-family:'Fraunces',serif;font-size:13px;font-weight:900;color:var(--gold);letter-spacing:.02em}
+.tb-brand span{color:var(--white);font-weight:400;font-style:italic}
+.tb-tier{font-size:9px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--muted)}
+
+/* HERO */
+.hero{padding:80px 32px 64px;text-align:center;background:radial-gradient(ellipse 80% 50% at 50% 0%,rgba(212,168,50,.07) 0%,transparent 65%);border-bottom:1px solid var(--border);position:relative}
+.hero-tier{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(212,168,50,.3);background:var(--gold-dim);color:var(--gold);font-size:9px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;padding:6px 18px;margin-bottom:28px}
+.hero h1{font-family:'Fraunces',serif;font-size:clamp(36px,6vw,78px);font-weight:900;line-height:.98;letter-spacing:-.02em;color:var(--white);margin-bottom:8px}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero-sub{font-size:17px;font-weight:300;color:var(--muted);max-width:520px;margin:0 auto 40px;line-height:1.6}
+.hero-price-wrap{display:inline-block;text-align:center;margin-bottom:36px}
+.hero-price-was{font-size:13px;color:#3A3A44;text-decoration:line-through;margin-bottom:2px}
+.hero-price{font-family:'Fraunces',serif;font-size:clamp(48px,7vw,72px);font-weight:900;color:var(--gold);line-height:1}
+.hero-price-note{font-size:11px;color:var(--muted);margin-top:4px;letter-spacing:.08em;text-transform:uppercase}
+.hero-stats{display:flex;gap:40px;justify-content:center;flex-wrap:wrap;margin-top:8px}
+.hs-item{text-align:center}
+.hs-num{font-family:'Fraunces',serif;font-size:28px;font-weight:900;color:var(--gold);line-height:1}
+.hs-label{font-size:9px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+
+/* SECTIONS */
+.wrap{max-width:880px;margin:0 auto;padding:0 32px}
+section{padding:72px 0}
+.sec-rule{border:none;border-top:1px solid var(--border)}
+.eyebrow{font-size:9px;font-weight:700;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:'';width:18px;height:1px;background:var(--gold)}
+h2{font-family:'Fraunces',serif;font-size:clamp(24px,3.5vw,42px);font-weight:900;line-height:1.1;color:var(--white);margin-bottom:12px}
+h2 em{font-style:italic;color:var(--gold)}
+.section-lead{font-size:16px;color:var(--muted);max-width:580px;margin-bottom:40px;line-height:1.65}
+
+/* MODULE LIST */
+.modules{display:flex;flex-direction:column;gap:3px}
+.mod-item{background:var(--card);border:1px solid var(--border);display:grid;grid-template-columns:52px 1fr;gap:0;transition:border-color .15s}
+.mod-item:hover{border-color:rgba(212,168,50,.3)}
+.mod-num-col{background:var(--deep);border-right:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:14px;font-weight:900;color:var(--gold)}
+.mod-body{padding:16px 20px}
+.mod-title{font-size:14px;font-weight:700;color:var(--white);margin-bottom:4px}
+.mod-desc{font-size:12px;color:var(--muted);line-height:1.55}
+.mod-solves{display:inline-block;background:var(--gold-dim);color:var(--gold);font-size:9px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:2px 8px;margin-top:6px}
+
+/* BONUS STACK */
+.bonuses{display:flex;flex-direction:column;gap:3px;margin-top:16px}
+.bonus-item{background:var(--card);border:1px solid var(--border);display:grid;grid-template-columns:52px 1fr auto;gap:0;overflow:hidden;transition:border-color .15s}
+.bonus-item:hover{border-color:rgba(212,168,50,.25)}
+.bonus-num{background:var(--black);border-right:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:14px;font-weight:900;color:var(--gold)}
+.bonus-body{padding:14px 18px}
+.bonus-title{font-size:13px;font-weight:700;color:var(--white);margin-bottom:2px}
+.bonus-desc{font-size:11px;color:var(--muted);line-height:1.45}
+.bonus-val{background:var(--gold-dim);border-left:1px solid var(--border);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:12px 16px;text-align:center;min-width:90px}
+.bonus-val-label{font-size:8px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+.bonus-val-price{font-family:'Fraunces',serif;font-size:16px;font-weight:900;color:var(--gold)}
+
+/* VALUE TABLE */
+.value-table{width:100%;border-collapse:collapse;margin-top:32px}
+.value-table th{background:var(--dark);color:var(--gold-pale);font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;padding:10px 16px;text-align:left;border-bottom:1px solid var(--border)}
+.value-table td{padding:10px 16px;border-bottom:1px solid rgba(255,255,255,.04);color:var(--off);font-size:13px;vertical-align:middle}
+.value-table tr:nth-child(even) td{background:rgba(255,255,255,.02)}
+.value-table .total-row td{background:var(--dark);color:var(--white);font-weight:700;font-size:14px;border-top:1px solid var(--border)}
+.value-table .pay-row td{background:rgba(212,168,50,.08);color:var(--white);font-weight:700;font-size:14px}
+.value-table td.val-price{text-align:right;color:var(--green-l);font-weight:700;white-space:nowrap}
+.value-table .total-row td.val-price{font-family:'Fraunces',serif;font-size:20px;color:var(--gold)}
+.value-table .pay-row td.val-price{font-family:'Fraunces',serif;font-size:20px;color:var(--gold)}
+
+/* GUARANTEE */
+.guarantee{background:var(--card);border:1px solid rgba(192,64,64,.3);border-top:2px solid var(--red);padding:32px;margin:20px 0}
+.g-label{font-size:9px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--red);margin-bottom:10px}
+.g-title{font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:var(--white);margin-bottom:8px}
+.g-desc{font-size:14px;color:var(--muted);line-height:1.7;max-width:580px}
+
+/* WHO THIS IS FOR */
+.who-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px}
+.who-card{background:var(--card);border:1px solid var(--border);padding:24px}
+.who-num{font-family:'Fraunces',serif;font-size:40px;font-weight:900;color:rgba(212,168,50,.15);line-height:1;margin-bottom:6px}
+.who-title{font-family:'Fraunces',serif;font-size:16px;font-weight:700;color:var(--white);margin-bottom:6px}
+.who-desc{font-size:13px;color:var(--muted);line-height:1.6}
+
+/* PROOF */
+.proof-box{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--gold);padding:24px 28px;margin:16px 0}
+.proof-quote{font-family:'Fraunces',serif;font-size:18px;font-style:italic;color:var(--white);line-height:1.45;margin-bottom:12px}
+.proof-attr{font-size:12px;color:var(--muted)}
+.proof-attr strong{color:var(--gold)}
+
+/* CTA SECTION */
+.cta-section{background:var(--card);border:1px solid var(--border);border-top:2px solid var(--gold);padding:48px 40px;text-align:center}
+.cta-section h2{margin-bottom:10px}
+.cta-section p{font-size:15px;color:var(--muted);max-width:480px;margin:0 auto 32px;line-height:1.65}
+.cta-btn{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:var(--black);font-family:'Syne',sans-serif;font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;padding:16px 40px;cursor:pointer;border:none;text-decoration:none;transition:all .15s;margin-bottom:8px}
+.cta-btn:hover{background:var(--gold-l);transform:translateY(-2px)}
+.cta-note{font-size:12px;color:var(--muted);margin-top:12px}
+.cta-note a{color:var(--gold);text-decoration:none}
+
+/* FAQ */
+.faqs{display:flex;flex-direction:column;gap:3px;margin-top:16px}
+.faq{background:var(--card);border:1px solid var(--border);overflow:hidden}
+.faq-q{padding:16px 20px;font-size:14px;font-weight:700;color:var(--white);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq-q:hover{color:var(--gold)}
+.faq-icon{color:var(--gold);font-size:18px;flex-shrink:0;transition:transform .2s}
+.faq.open .faq-icon{transform:rotate(45deg)}
+.faq-a{display:none;padding:0 20px 16px;font-size:13px;color:var(--muted);line-height:1.7;border-top:1px solid var(--border);padding-top:14px}
+.faq.open .faq-a{display:block}
+
+@media(max-width:640px){
+  .topbar{padding:12px 18px}.hero{padding:60px 20px 48px}.wrap{padding:0 18px}
+  .who-grid{grid-template-columns:1fr}.bonus-item{grid-template-columns:44px 1fr}
+  .bonus-val{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="tb-brand">The Profitable Retail System<span>™</span></div>
+  <div class="tb-tier">Tier 1 — Foundation</div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-tier">Tier 1 · 8-Week Self-Paced Program</div>
+  <h1>The Import<br><em>Blueprint™</em></h1>
+  <p class="hero-sub">Get the complete US/UK importing system — sourcing, payments, shipping, customs, and currency protection — built from 12 years of real Ghana retail experience.</p>
+  <div class="hero-price-wrap">
+    <div class="hero-price-was">Total value: GH₵ 12,300</div>
+    <div class="hero-price">GH₵ 3,500</div>
+    <div class="hero-price-note">One-time · Lifetime access · Guaranteed</div>
+  </div>
+  <div class="hero-stats">
+    <div class="hs-item"><div class="hs-num">8</div><div class="hs-label">Modules</div></div>
+    <div class="hs-item"><div class="hs-num">6</div><div class="hs-label">Bonuses</div></div>
+    <div class="hs-item"><div class="hs-num">9</div><div class="hs-label">Problems Solved</div></div>
+    <div class="hs-item"><div class="hs-num">12 yrs</div><div class="hs-label">Operator Experience</div></div>
+  </div>
+</div>
+
+<!-- WHO IT'S FOR -->
+<div class="wrap">
+<section>
+  <div class="eyebrow">Who This Is For</div>
+  <h2>Built for Ghana's <em>Real Importers</em></h2>
+  <p class="section-lead">You're already in the game — or you're ready to start. Either way, you're dealing with real problems that are costing you real money.</p>
+  <div class="who-grid">
+    <div class="who-card">
+      <div class="who-num">01</div>
+      <div class="who-title">Already Importing from US/UK</div>
+      <div class="who-desc">You're sourcing but struggling with margins, payments, shipping costs, or currency exposure. You want the specific systems that turn sourcing into a predictable, profitable machine.</div>
+    </div>
+    <div class="who-card">
+      <div class="who-num">02</div>
+      <div class="who-title">Switching to US/UK Sourcing</div>
+      <div class="who-desc">You currently source from China, Dubai, or EU and want to break into the US/UK premium discount market. You need the access, contacts, and payment infrastructure to make it work.</div>
+    </div>
+  </div>
+</section>
+</div>
+
+<hr class="sec-rule">
+
+<!-- MODULES -->
+<div class="wrap">
+<section>
+  <div class="eyebrow">The 8 Modules</div>
+  <h2>Every Module Solves <em>One Specific Problem</em></h2>
+  <p class="section-lead">No padding, no filler. Each module is built around a real pain point with a tested, practical solution you implement on your next buying cycle.</p>
+  <div class="modules">
+    <div class="mod-item"><div class="mod-num-col">01</div><div class="mod-body"><div class="mod-title">Finding & Vetting US/UK Buyers You Can Trust</div><div class="mod-desc">How to find, test, and lock in a reliable sourcing partner in the US or UK — including the 5-step vetting process and red flag checklist.</div><span class="mod-solves">Solves #1 — No trusted buyer on the ground</span></div></div>
+    <div class="mod-item"><div class="mod-num-col">02</div><div class="mod-body"><div class="mod-title">Breaking the Payment Card Barrier</div><div class="mod-desc">Every working solution for buying from US/UK online stores without a Ghana payment card — ranked by cost and reliability. Includes full Wise setup walkthrough.</div><span class="mod-solves">Solves #2 & #4 — Payment blocks & high exchange rates</span></div></div>
+    <div class="mod-item"><div class="mod-num-col">03</div><div class="mod-body"><div class="mod-title">The Discount Source Map</div><div class="mod-desc">Every major discount channel in the US and UK mapped by brand, margin, and access method. Includes the full 12-month Brand Discount Calendar.</div><span class="mod-solves">Solves #5 & #6 — Can't find consistent discounts</span></div></div>
+    <div class="mod-item"><div class="mod-num-col">04</div><div class="mod-body"><div class="mod-title">The Pre-Shipment Storage System</div><div class="mod-desc">How to hold goods safely in the US or UK between purchase and shipping — without paying expensive storage fees or risking damaged or lost items.</div><span class="mod-solves">Solves #7 & #8 — No local storage person or facility</span></div></div>
+    <div class="mod-item"><div class="mod-num-col">05</div><div class="mod-body"><div class="mod-title">Shipping Strategy — Cut Costs by 30–40%</div><div class="mod-desc">Sea vs air, container sharing, dimensional weight, the full landed cost formula, and 6 specific tactics that reduce your shipping bill on every consignment.</div><span class="mod-solves">Solves #9 — High shipping costs</span></div></div>
+    <div class="mod-item"><div class="mod-num-col">06</div><div class="mod-body"><div class="mod-title">Ghana Customs Navigation</div><div class="mod-desc">How the door-to-warehouse shipping model works — your shippers handle everything from US/UK pickup to Ghana delivery. No customs stress, no surprise bills.</div><span class="mod-solves">Solves #10 — Customs & clearance uncertainty</span></div></div>
+    <div class="mod-item"><div class="mod-num-col">07</div><div class="mod-body"><div class="mod-title">Currency Risk Management</div><div class="mod-desc">The Cedi Protection Pricing Formula, the 3 risk zones, timing your purchases, and the 90-day re-pricing system that protects your margins when the cedi moves.</div><span class="mod-solves">Solves #19 — Currency rate fluctuation (CRITICAL)</span></div></div>
+    <div class="mod-item"><div class="mod-num-col">08</div><div class="mod-body"><div class="mod-title">Transit Cash Flow — Keep Your Business Liquid</div><div class="mod-desc">The pre-order and deposit model that funds your next buying cycle before your current shipment arrives — and how to run two buying cycles in parallel.</div><span class="mod-solves">Solves #11 — Cash locked in transit</span></div></div>
+  </div>
+</section>
+</div>
+
+<hr class="sec-rule">
+
+<!-- BONUSES -->
+<div class="wrap">
+<section>
+  <div class="eyebrow">The Bonus Stack</div>
+  <h2>6 Bonuses Worth <em>GH₵ 6,300</em></h2>
+  <p class="section-lead">Each bonus removes a specific implementation barrier. These aren't filler — they're the tools that get you moving immediately.</p>
+  <div class="bonuses">
+    <div class="bonus-item"><div class="bonus-num">B1</div><div class="bonus-body"><div class="bonus-title">Vetted Vendor & Buyer Rolodex (US & UK)</div><div class="bonus-desc">Our personal list of trusted sourcing agents and buyers — with notes on their specialties, reliability, and how to approach them. Saves 6–12 months of trial and error.</div></div><div class="bonus-val"><div class="bonus-val-label">Value</div><div class="bonus-val-price">GH₵ 2,500</div></div></div>
+    <div class="bonus-item"><div class="bonus-num">B2</div><div class="bonus-body"><div class="bonus-title">Ghana Customs Duty Calculator + Clearance Checklist</div><div class="bonus-desc">Enter your shipment details, see your estimated total landed cost instantly. Know your numbers before you buy.</div></div><div class="bonus-val"><div class="bonus-val-label">Value</div><div class="bonus-val-price">GH₵ 800</div></div></div>
+    <div class="bonus-item"><div class="bonus-num">B3</div><div class="bonus-body"><div class="bonus-title">48-Hour Quick-Start Action Plan</div><div class="bonus-desc">Exactly what to do in your first 48 hours after enrolling — so you start implementing while you're still learning.</div></div><div class="bonus-val"><div class="bonus-val-label">Value</div><div class="bonus-val-price">GH₵ 500</div></div></div>
+    <div class="bonus-item"><div class="bonus-num">B4</div><div class="bonus-body"><div class="bonus-title">Private WhatsApp Community — 3 Months Access</div><div class="bonus-desc">Curated group of fellow Ghana importers. Share discount finds, ask questions, get accountability and market alerts.</div></div><div class="bonus-val"><div class="bonus-val-label">Value</div><div class="bonus-val-price">GH₵ 1,200</div></div></div>
+    <div class="bonus-item"><div class="bonus-num">B5</div><div class="bonus-body"><div class="bonus-title">Brand Discount Calendar — 12 Months</div><div class="bonus-desc">When every major brand runs its deepest clearances. Plan your buying capital around this and never miss a peak discount window again.</div></div><div class="bonus-val"><div class="bonus-val-label">Value</div><div class="bonus-val-price">GH₵ 600</div></div></div>
+    <div class="bonus-item"><div class="bonus-num">B6</div><div class="bonus-body"><div class="bonus-title">The Cedi Protection Pricing Formula</div><div class="bonus-desc">A simple formula with worked examples showing how to price every item so a 20–30% cedi drop doesn't destroy your margin.</div></div><div class="bonus-val"><div class="bonus-val-label">Value</div><div class="bonus-val-price">GH₵ 700</div></div></div>
+  </div>
+
+  <table class="value-table">
+    <thead><tr><th>What You're Getting</th><th>Type</th><th style="text-align:right">Value</th></tr></thead>
+    <tbody>
+      <tr><td>8-Module Core Program (lifetime access)</td><td>Video + Workbook</td><td class="val-price">GH₵ 6,000</td></tr>
+      <tr><td>B1 — Vetted Vendor & Buyer Rolodex</td><td>Resource List</td><td class="val-price">GH₵ 2,500</td></tr>
+      <tr><td>B2 — Customs Duty Calculator</td><td>Spreadsheet Tool</td><td class="val-price">GH₵ 800</td></tr>
+      <tr><td>B3 — 48-Hour Quick-Start Plan</td><td>Checklist</td><td class="val-price">GH₵ 500</td></tr>
+      <tr><td>B4 — WhatsApp Community (3 months)</td><td>Live Community</td><td class="val-price">GH₵ 1,200</td></tr>
+      <tr><td>B5 — Brand Discount Calendar</td><td>Data Resource</td><td class="val-price">GH₵ 600</td></tr>
+      <tr><td>B6 — Cedi Protection Formula</td><td>Formula + Examples</td><td class="val-price">GH₵ 700</td></tr>
+      <tr class="total-row"><td colspan="2"><strong>Total Stack Value</strong></td><td class="val-price">GH₵ 12,300</td></tr>
+      <tr class="pay-row"><td colspan="2"><strong>Your Investment Today</strong></td><td class="val-price">GH₵ 3,500</td></tr>
+    </tbody>
+  </table>
+</section>
+</div>
+
+<hr class="sec-rule">
+
+<!-- GUARANTEE -->
+<div class="wrap">
+<section>
+  <div class="eyebrow">The Guarantee</div>
+  <h2>We Win When <em>You Win</em></h2>
+  <div class="guarantee">
+    <div class="g-label">🛡 The First Shipment Savings Guarantee</div>
+    <div class="g-title">If Your Costs Don't Drop — You Pay Nothing</div>
+    <div class="g-desc">Complete all 8 modules and implement the sourcing, payment, and shipping systems on your next buying cycle. If your total landed cost per shipment does not decrease compared to your previous shipment of similar size, send us a message and we will refund your full GH₵ 3,500 within 7 days. No forms. No back-and-forth. No questions.</div>
+  </div>
+
+  <!-- PROOF -->
+  <div class="proof-box" style="margin-top:32px">
+    <div class="proof-quote">"This isn't something I built to sell — it's the exact system I built to survive and then thrive. My businesses generated GH₵ 1.4M last year and are on track for GH₵ 2.4M this year. Every module is something I use personally, right now."</div>
+    <div class="proof-attr">— <strong>Kwabena A.</strong>, Co-founder, Boundaries Couture & Boundaries Monsieur · 12 years Ghana retail & import operator</div>
+  </div>
+</section>
+</div>
+
+<hr class="sec-rule">
+
+<!-- FAQ -->
+<div class="wrap">
+<section>
+  <div class="eyebrow">Common Questions</div>
+  <h2>Before You <em>Enrol</em></h2>
+  <div class="faqs">
+    <div class="faq"><div class="faq-q">Do I need to already be importing from the US or UK?<span class="faq-icon">+</span></div><div class="faq-a">No. The program works whether you're already importing or just starting. If you currently source from China, Dubai, or the EU and want to switch to US/UK, this program gives you everything you need to make that transition profitably.</div></div>
+    <div class="faq"><div class="faq-q">How is the content delivered?<span class="faq-icon">+</span></div><div class="faq-a">You receive access to the course portal (an HTML file you can open in any browser) plus a printable companion workbook PDF. Both are yours permanently — no login, no subscription, no platform that disappears.</div></div>
+    <div class="faq"><div class="faq-q">What if I get stuck or have questions?<span class="faq-icon">+</span></div><div class="faq-a">You get 3 months access to the private WhatsApp community (Bonus B4) where you can ask questions and get peer support. For more direct support, Tier 2 includes live group coaching calls.</div></div>
+    <div class="faq"><div class="faq-q">How do I pay? Can I pay via Mobile Money?<span class="faq-icon">+</span></div><div class="faq-a">Yes — Mobile Money is our primary payment method. MTN MoMo, Vodafone Cash, and AirtelTigo Money all accepted. Message us on WhatsApp and we'll send you the MoMo number and confirm access once payment is received.</div></div>
+    <div class="faq"><div class="faq-q">Is this program in English?<span class="faq-icon">+</span></div><div class="faq-a">Yes, fully in English. The content is written for Ghana-based operators — all examples, prices, and calculations use Ghana cedis and reference real Ghana market conditions.</div></div>
+    <div class="faq"><div class="faq-q">Can I upgrade to Tier 2 later?<span class="faq-icon">+</span></div><div class="faq-a">Yes. Tier 1 is designed as the foundation for Tier 2. Once you've implemented the Tier 1 systems, you can enrol in The Profitable Operator (Tier 2) at any time. Tier 1 completers receive a priority invitation when new Tier 2 cohorts open.</div></div>
+  </div>
+</section>
+</div>
+
+<!-- CTA -->
+<div class="wrap" style="padding-bottom:80px">
+  <div class="cta-section">
+    <h2>Ready to <em>Start?</em></h2>
+    <p>Message us on WhatsApp to enrol. We'll confirm your MoMo payment and send you immediate access — usually within the hour.</p>
+    <a class="cta-btn" href="https://wa.me/15517750655?text=Hi%2C%20I%27d%20like%20to%20enrol%20in%20The%20Import%20Blueprint%20%E2%80%94%20Tier%201" target="_blank">Enrol via WhatsApp — GH₵ 3,500 →</a>
+    <div class="cta-note">Pay via Mobile Money · Instant access after payment · <a href="#">Take the free Profit Leak Audit first</a></div>
+  </div>
+</div>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(q=>{
+  q.addEventListener('click',()=>{
+    const faq = q.parentElement;
+    faq.classList.toggle('open');
+  });
+});
+</script>
+</body>
+</html>
